@@ -1,0 +1,9 @@
+# Core dependencies
+python-dateutil
+pytz
+
+# Optional enhancements
+ttkbootstrap  # If you're using themed ttk widgets
+pillow         # For image handling (e.g., loading icons)
+ttkbootstrap
+tkcalendar  # For calendar widgets

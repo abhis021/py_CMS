@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+dao/__pycache__/
+models/__pycache__/
+ui/__pycache__/
+database/__pycache__/
