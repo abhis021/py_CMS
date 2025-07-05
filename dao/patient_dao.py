@@ -1,7 +1,7 @@
-from database import Database
+from database import Database, get_writable_db_path
 from models.patient import Patient
 
-db = Database()
+db = Database(get_writable_db_path())
 
 class PatientDAO:
     @staticmethod
@@ -10,7 +10,13 @@ class PatientDAO:
             INSERT INTO patients (name, dob, gender, contact_info, address)
             VALUES (?, ?, ?, ?, ?)
         """
-        params = (patient.name, patient.dob, patient.gender, patient.contact_info, patient.address)
+        params = (
+            patient.name,
+            patient.dob,
+            patient.gender,
+            patient.contact_info,
+            patient.address
+        )
         return db.execute_query(query, params)
 
     @staticmethod
@@ -20,7 +26,14 @@ class PatientDAO:
             SET name = ?, dob = ?, gender = ?, contact_info = ?, address = ?
             WHERE id = ?
         """
-        params = (patient.name, patient.dob, patient.gender, patient.contact_info, patient.address, patient.id)
+        params = (
+            patient.name,
+            patient.dob,
+            patient.gender,
+            patient.contact_info,
+            patient.address,
+            patient.id
+        )
         return db.execute_query(query, params)
 
     @staticmethod

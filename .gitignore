@@ -4,3 +4,8 @@ dao/__pycache__/
 models/__pycache__/
 ui/__pycache__/
 database/__pycache__/
+build/
+dist/
+*.egg-info/
+Output/
+output/

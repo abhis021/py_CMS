@@ -1,9 +1,9 @@
 [Setup]
-AppName=Clinic Management System
+AppName=PyCMS
 AppVersion=1.0
-DefaultDirName={pf}\ClinicCMS
-DefaultGroupName=ClinicCMS
-OutputBaseFilename=ClinicCMSInstaller
+DefaultDirName={pf}\PyCMS
+DefaultGroupName=PyCMS
+OutputBaseFilename=PyCMSInstaller
 Compression=lzma
 SolidCompression=yes
 
@@ -11,4 +11,4 @@ SolidCompression=yes
 Source: "dist\app.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
-Name: "{group}\ClinicCMS"; Filename: "{app}\app.exe"
+Name: "{group}\PyCMS"; Filename: "{app}\app.exe"

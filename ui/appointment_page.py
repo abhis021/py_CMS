@@ -19,6 +19,7 @@ class AppointmentPage(tk.Frame):
         self.load_appointments()
         self.load_doctors_and_patients()
         self.clear_form()
+        self.bind("<FocusIn>", self.on_focus)
 
     def create_widgets(self):
         tk.Label(self, text="Appointment Management", font=("Arial", 16)).grid(row=0, column=0, columnspan=4, pady=10)
@@ -154,6 +155,7 @@ class AppointmentPage(tk.Frame):
                 messagebox.showinfo("Success", "Appointment added successfully!")
                 self.clear_form()
                 self.load_appointments()
+                self.refresh_dropdowns()
             else:
                 messagebox.showerror("Error", "Failed to add appointment.")
 
@@ -174,3 +176,10 @@ class AppointmentPage(tk.Frame):
         self.time_entry.delete(0, tk.END)
         self.time_entry.insert(0, now.strftime("%H:%M"))
         self.reason_entry.delete(0, tk.END)
+
+    def refresh_dropdowns(self):
+        self.load_doctors_and_patients()
+        self.update_dob_label()
+
+    def on_focus(self, event):
+        self.refresh_dropdowns()
