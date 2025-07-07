@@ -1,7 +1,7 @@
-from database import Database
+from database import Database, get_writable_db_path
 from models.billing import Billing
 
-db = Database()
+db = Database(get_writable_db_path())
 
 class BillingDAO:
     @staticmethod

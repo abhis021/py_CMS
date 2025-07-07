@@ -4,4 +4,8 @@ dao/__pycache__/
 models/__pycache__/
 ui/__pycache__/
 database/__pycache__/
-clinic.db
+build/
+dist/
+*.egg-info/
+Output/
+output/

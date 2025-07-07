@@ -1,0 +1,1 @@
+pyinstaller --onefile --noconsole app.py --add-data "models;models" --add-data "services;services" --add-data "ui;ui" --add-data "dao;dao" --add-data "utils;utils" --add-data "resources;resources" --add-data "schema.sql;." --add-data "clinic.db;."
